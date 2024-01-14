@@ -70,8 +70,7 @@ WORKDIR /home/${USER_NAME}
 USER ${USER_NAME}
 
 # Setup startup_execution.sh
-COPY ./startup_execution.sh /home/${USER_NAME}/
-RUN sudo chown ${USER_NAME}:${USER_NAME} ~/startup_execution.sh &&\
-    chmod 700 ~/startup_execution.sh
+COPY ./startup_execution.sh /root/
+RUN sudo chmod 700 /root/startup_execution.sh
 
-ENTRYPOINT ~/startup_execution.sh
+ENTRYPOINT sudo /root/startup_execution.sh

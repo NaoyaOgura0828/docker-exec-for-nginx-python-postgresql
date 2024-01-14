@@ -55,10 +55,3 @@ psql
 > [!TIP]
 > デフォルトユーザー以外は作成されていない。<br>
 > 必要に応じて作成する必要がある。
-
-<br>
-
-# 注意事項
-> [!CAUTION]
-> ユーザーディレクトリ内の[startup_execution.sh](./server/startup_execution.sh)は削除しないこと。
-> コンテナが起動できなくなる。
